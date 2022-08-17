@@ -85,12 +85,15 @@ double metercubehour(int x) { return x * 150.9096; }
 double metercubeday(int x) { return x * 6.2876; }
 double gallonpermin(int x) { return x * 34.28571312; }
 
+// This function pass the amount to the function and check if the value is too high
 void checkvalue(int x, double (*func)(int)) {
   if (func(x) > 20000) {
     cout << "\n\t"
          << "The value is too big!!!";
   }
 }
+
+// This function check if the input is good or not and clear the cin to avoid crashing
 void checkcin() {
   while (!cin.good()) {
     cin.clear();
